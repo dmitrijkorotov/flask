@@ -1,0 +1,65 @@
+@baseUrl = http://127.0.0.1:5000/user/
+@baseUrl_2 = http://127.0.0.1:5000/advertisment/
+
+#Создание пользователя
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "name": "test_2",
+    "password": "fhfdhhdd",
+    "email": "t10@mail.com"
+}
+
+###
+
+#Получение пользователя
+GET {{baseUrl}}/1
+
+###
+
+#Обновление пользователя
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "name": "test_88"
+}
+
+###
+
+#Удаление пользователя
+DELETE {{baseUrl}}/1
+
+###
+
+#Создание объявления
+POST {{baseUrl_2}}
+Content-Type: application/json
+
+{
+    "title": "Тестовое 20",
+    "description": "Описание_00",
+    "user_id": 1
+}
+
+###
+
+#Получение объявления
+GET {{baseUrl_2}}/1
+
+###
+
+#Обновление объявления
+PATCH {{baseUrl_2}}/1
+Content-Type: application/json
+
+{
+    "title": "Тестовое объявление_10",
+    "description": "Описание объявления_100"
+}
+
+###
+
+#Удаление объявления
+DELETE {{baseUrl_2}}/1
